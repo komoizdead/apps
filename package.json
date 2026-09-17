@@ -1,0 +1,29 @@
+{
+  "name": "hisab-calculator",
+  "version": "1.0.0",
+  "description": "A Bengali calculator for totals, VAT, and tax calculations.",
+  "keywords": [
+    "calculator",
+    "bengali",
+    "bangla",
+    "vat",
+    "tax",
+    "finance"
+  ],
+  "homepage": "https://komoizdead.github.io/apps/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/komoizdead/apps.git"
+  },
+  "bugs": {
+    "url": "https://github.com/komoizdead/apps/issues"
+  },
+  "files": [
+    "index.html",
+    "style.css",
+    "script.js",
+    "service-worker.js",
+    "manifest.webmanifest",
+    "icon.svg"
+  ]
+}
