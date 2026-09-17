@@ -1,123 +1,79 @@
 <!doctype html>
-<html lang="bn">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#8bbd24" />
-    <meta name="mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-    <meta name="apple-mobile-web-app-title" content="হিসাব" />
-    <title>হিসাব | Calculator</title>
+    <meta name="theme-color" content="#17211b" />
+    <meta name="description" content="Useful tech, delivered anywhere in Bangladesh." />
+    <title>Nexora | Useful tech, delivered</title>
     <link rel="manifest" href="manifest.webmanifest" />
     <link rel="icon" href="icon.svg" type="image/svg+xml" />
-    <link rel="apple-touch-icon" href="icon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Anek+Bangla:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="festival-backdrop" aria-hidden="true">
-      <div class="festival-sun"></div>
-      <div class="random-circle random-circle-one"></div>
-      <div class="random-circle random-circle-two"></div>
-      <div class="random-circle random-circle-three"></div>
-      <div class="alpana alpana-left"></div>
-      <div class="alpana alpana-right"></div>
-      <div class="festival-banner">শুভ নববর্ষ</div>
-      <div class="festival-leaf leaf-one"></div>
-      <div class="festival-leaf leaf-two"></div>
-      <div class="canvas-line canvas-line-left"></div>
-      <div class="canvas-line canvas-line-right"></div>
-      <div class="canvas-line canvas-line-long canvas-line-left-long"></div>
-      <div class="canvas-line canvas-line-long canvas-line-right-long"></div>
-      <div class="festival-confetti confetti-one">✦</div>
-      <div class="festival-confetti confetti-two">•</div>
-      <div class="festival-confetti confetti-three">✦</div>
-      <div class="festival-confetti confetti-four">•</div>
-    </div>
-    <main class="app-shell">
-      <section class="calculator-card" aria-label="হিসাব ক্যালকুলেটর">
-        <header class="topbar">
-          <div class="brand-mark flag-mark" role="img" aria-label="বাংলাদেশের পতাকা" title="বাংলাদেশ"></div>
-          <div>
-            <p class="eyebrow">সহজ হিসাব</p>
-            <h1>ক্যালকুলেটর</h1>
-          </div>
-          <div class="status-dot" title="সক্রিয়"></div>
-        </header>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Nexora home"><span class="brand-mark"></span>NEXORA</a>
+      <nav aria-label="Main navigation"><a href="#shop">Shop</a><a href="#promise">Why us</a><a href="#setup">Setup</a></nav>
+      <button class="bag-button" type="button" data-scroll="order">Bag <span id="bagCount">0</span></button>
+    </header>
 
-        <div class="display-panel">
-          <div class="display-meta">
-            <span id="expressionPreview">প্রস্তুত</span>
-            <span class="live-label">লাইভ</span>
-          </div>
-          <output id="display" class="display-value" aria-live="polite">০</output>
-          <p id="resultWords" class="result-words" aria-live="polite"></p>
+    <main id="top">
+      <section class="hero wrap">
+        <div class="hero-copy">
+          <p class="eyebrow">CURATED TECH / BANGLADESH</p>
+          <h1>Small upgrades.<br /><em>Big everyday wins.</em></h1>
+          <p class="hero-lede">Useful gadgets for work, travel and home, selected for how people actually live here.</p>
+          <a class="button button-lime" href="#shop">Explore the first drop <span>↘</span></a>
+          <div class="hero-points"><span>COD available</span><span>Dhaka from ৳80</span><span>7-day support</span></div>
         </div>
-
-        <div class="tax-toolbar" aria-label="ভ্যাট ও করের দ্রুত হিসাব">
-          <div>
-            <span class="tax-label">দ্রুত ভ্যাট</span>
-            <span class="tax-caption">মোটের সঙ্গে যোগ করুন</span>
-          </div>
-          <div class="tax-options" role="group" aria-label="ভ্যাটের হার">
-            <button class="tax-toggle" type="button" data-vat-rate="5" aria-pressed="false">ভ্যাট ৫%</button>
-            <button class="tax-toggle" type="button" data-vat-rate="7.5" aria-pressed="false">ভ্যাট ৭.৫%</button>
-            <button class="tax-toggle" type="button" data-vat-rate="15" aria-pressed="false">ভ্যাট ১৫%</button>
-          </div>
+        <div class="hero-art">
+          <span class="drop-stamp">NEW<br />DROP<br /><b>01</b></span>
+          <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=1200&q=82" alt="Wireless headphones ready for everyday listening" />
+          <div class="art-caption"><span>01 / 04</span><b>Soundcore Q20i</b><span>৳3,490</span></div>
         </div>
-
-        <div class="calculator-body">
-          <div class="keypad" role="group" aria-label="ক্যালকুলেটর বোতাম">
-            <button class="key key-muted" data-action="clear" aria-label="সব মুছুন">AC</button>
-            <button class="key key-muted" data-action="delete" aria-label="শেষ অঙ্ক মুছুন">⌫</button>
-            <button class="key key-muted" data-action="percent" aria-label="শতাংশ">%</button>
-            <button class="key key-operator" data-value="÷" aria-label="ভাগ">÷</button>
-
-            <button class="key" data-value="7">৭</button>
-            <button class="key" data-value="8">৮</button>
-            <button class="key" data-value="9">৯</button>
-            <button class="key key-operator" data-value="×" aria-label="গুণ">×</button>
-
-            <button class="key" data-value="4">৪</button>
-            <button class="key" data-value="5">৫</button>
-            <button class="key" data-value="6">৬</button>
-            <button class="key key-operator" data-value="−" aria-label="বিয়োগ">−</button>
-
-            <button class="key" data-value="1">১</button>
-            <button class="key" data-value="2">২</button>
-            <button class="key" data-value="3">৩</button>
-            <button class="key key-operator" data-value="+" aria-label="যোগ">+</button>
-
-            <button class="key key-zero" data-value="0">০</button>
-            <button class="key" data-value=".">.</button>
-            <button class="key key-equals" data-action="equals" aria-label="সমান">=</button>
-          </div>
-
-          <aside class="history-panel" aria-label="হিসাবের ইতিহাস">
-            <div class="history-heading">
-              <h2>সাম্প্রতিক হিসাব</h2>
-              <button id="clearHistory" class="text-button" type="button">মুছুন</button>
-            </div>
-            <div id="historyList" class="history-list">
-              <p class="empty-history">এখনো কোনো হিসাব নেই</p>
-            </div>
-          </aside>
-        </div>
-
-        <footer class="footer-note">
-          <span>কীবোর্ড দিয়েও হিসাব করুন</span>
-          <span class="key-hint">Enter <b>=</b></span>
-        </footer>
       </section>
+
+      <section class="signal-bar"><div class="wrap signal-inner"><span>Fast, lightweight demo</span><span>Grameenphone</span><span>Robi</span><span>Banglalink</span><span>Pathao ready</span><span>Steadfast ready</span></div></section>
+
+      <section id="shop" class="shop wrap">
+        <div class="section-head"><div><p class="eyebrow">THE FIRST DROP</p><h2>Good tech,<br />no guesswork.</h2></div><button class="outline-button" type="button" data-modal="catalogModal">＋ Add your products later</button></div>
+        <div id="productGrid" class="product-grid"></div>
+      </section>
+
+      <section id="promise" class="promise">
+        <div class="wrap promise-grid">
+          <div class="promise-lead"><p class="eyebrow">THE NEXORA PROMISE</p><h2>Designed around<br /><span>your checkout.</span></h2></div>
+          <div class="promise-item"><b>01</b><h3>Three fields only</h3><p>Full name, phone number and delivery address. A genuinely one-click order form.</p></div>
+          <div class="promise-item"><b>02</b><h3>Shipping, sorted</h3><p>Pick your city and see the delivery fee update instantly: Dhaka ৳70–৳80, outside ৳120–৳150.</p></div>
+          <div class="promise-item"><b>03</b><h3>Pay your way</h3><p>Cash on Delivery with direct bKash and Nagad merchant options ready to connect.</p></div>
+        </div>
+      </section>
+
+      <section id="order" class="order wrap">
+        <div class="order-intro"><p class="eyebrow">QUICK ORDER</p><h2>Your cart,<br />made simple.</h2><p>We confirm every order by phone before dispatch. Choose your city to calculate delivery automatically.</p><div class="tracking-ready"><span></span><div><b>Campaign tracking ready</b><small>Meta Pixel + Conversion API hook included</small></div></div></div>
+        <form id="orderForm" class="order-form">
+          <div class="form-title"><span>01</span><h3>Delivery details</h3></div>
+          <label>Full name<input name="name" type="text" placeholder="e.g. Imran Huda" required /></label>
+          <label>Phone number<input name="phone" type="tel" placeholder="01XXXXXXXXX" pattern="01[3-9][0-9]{8}" required /></label>
+          <label>Delivery address<textarea name="address" rows="2" placeholder="House, road, area" required></textarea></label>
+          <label>City<select id="citySelect" name="city"><option value="dhaka">Inside Dhaka — ৳80</option><option value="outside">Outside Dhaka — ৳140</option></select></label>
+          <div class="fee-line"><span>Delivery fee</span><b id="shippingCost">৳80</b></div>
+          <div class="total-line"><span>Order total</span><b id="orderTotal">৳0</b></div>
+          <fieldset><legend>Payment method</legend><label class="radio-label"><input type="radio" name="payment" value="cod" checked /> Cash on Delivery</label><label class="radio-label"><input type="radio" name="payment" value="bkash" /> bKash merchant: 01716108056</label><label class="radio-label"><input type="radio" name="payment" value="nagad" /> Nagad merchant</label></fieldset>
+          <button class="button button-lime submit-button" type="submit">Place my order <span>→</span></button>
+          <p id="formMessage" class="form-message" role="status"></p>
+        </form>
+      </section>
+
+      <section id="setup" class="setup"><div class="wrap setup-grid"><div><p class="eyebrow">READY FOR THE REAL STORE</p><h2>Lightweight now.<br /><em>Powerful later.</em></h2></div><div class="setup-list"><div><b>01</b><span>WordPress + Elementor / WooCommerce compatible</span></div><div><b>02</b><span>Pathao and Steadfast order placement hooks</span></div><div><b>03</b><span>Local BDIX hosting friendly for fast mobile loads</span></div><div><b>04</b><span>Product catalog upload reserved for your next step</span></div></div><button class="button button-dark" type="button" data-modal="catalogModal">See the product upload plan <span>↗</span></button></div></section>
     </main>
+
+    <div id="catalogModal" class="modal" hidden><div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="catalogTitle"><button class="modal-close" type="button" data-close aria-label="Close">×</button><p class="eyebrow">YOUR CATALOG</p><h2 id="catalogTitle">Bring your own drop.</h2><p>The demo products can be replaced later with your own catalog fields:</p><ul><li>Photos, title, price and stock</li><li>Variants, categories and delivery rules</li><li>WooCommerce or lightweight custom API</li><li>Pathao / Steadfast handoff after confirmation</li></ul><button class="button button-lime" type="button" data-close>Keep it open <span>→</span></button></div></div>
+
     <script src="script.js"></script>
-    <script>
-      if ('serviceWorker' in navigator && (location.protocol === 'https:' || location.hostname === 'localhost' || location.hostname === '127.0.0.1')) {
-        window.addEventListener('load', () => navigator.serviceWorker.register('service-worker.js'));
-      }
-    </script>
+    <script>if ('serviceWorker' in navigator && (location.protocol === 'https:' || location.hostname === 'localhost' || location.hostname === '127.0.0.1')) { window.addEventListener('load', () => navigator.serviceWorker.register('service-worker.js')); }</script>
   </body>
 </html>

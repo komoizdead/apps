@@ -1,4 +1,4 @@
-const CACHE_NAME = 'hisab-calculator-v12';
+const CACHE_NAME = 'nexora-store-v13';
 const APP_SHELL = [
   './',
   './index.html',
